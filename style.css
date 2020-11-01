@@ -1,6 +1,12 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: #1f2235;
     font-family: "Baloo Tamma 2",cursive;
+    width: 100%;
+    margin: 0 auto;
 }
 
 /*main heading font*/
@@ -52,7 +58,7 @@ body{
 
 .media_link{
     padding: 1rem;
-    max-width: 15rem;
+    max-width: 6rem;
     margin-left: 1rem;
     border: 2px solid #f5ba09;
     border-radius: 0.5rem;
