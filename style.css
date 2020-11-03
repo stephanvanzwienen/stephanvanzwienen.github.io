@@ -34,7 +34,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 .main_row h1{
     font-size: 5rem;
 }
@@ -50,6 +49,10 @@ body{
 
 .card{
    border-bottom: 8px solid #f5ba09; 
+}
+.card-text{
+    height: 4rem;
+    text-align: left;
 }
 
 #social-media{
