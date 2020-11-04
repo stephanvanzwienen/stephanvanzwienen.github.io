@@ -91,7 +91,7 @@ mdb-carousel .carousel-multi-item .controls-top .btn-floating {
 /*Sets the maximum height of the entire modal to 95% of the screen height*/
 .modal-content {
   max-height: 95vh;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 /*Sets the maximum height of the modal body to 90% of the screen height*/
