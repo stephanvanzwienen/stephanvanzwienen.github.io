@@ -1,68 +1,109 @@
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    background: #1f2235;
-    font-family: "Baloo Tamma 2",cursive;
-    width: 100%;
-    margin: 0 auto;
+body {
+  background: #1f2235;
+  font-family: "Baloo Tamma 2", cursive;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /*main heading font*/
-.m-heading{
-    font-family: "Roboto Slav", serif;
+.m-heading {
+  font-family: "Roboto Slav", serif;
 }
 
-.navigation-link{
-    border: 2px solid transparent;
+.navigation-link {
+  border: 2px solid transparent;
 }
 
-.navigation-link:hover{
-    text-decoration: none;
-    border-bottom: 2px solid #f5ba09;
-    transition: 0.5s ease;
+.navigation-link:hover {
+  text-decoration: none;
+  border-bottom: 2px solid #f5ba09;
+  transition: 0.5s ease;
 }
 
-.main-container{
-    min-height: 100vh;
-    padding-top: 5rem;
+.main-container {
+  min-height: 100vh;
+  padding-top: 5rem;
 }
 
-.main_row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.main_row h1{
-    font-size: 5rem;
+.main_row h1 {
+  font-size: 5rem;
 }
-.main_row img{
-    width: 100%;
-    height: 100%;
-}
-
-#about{
-    background: #313552;
-    border-radius: 0.5rem;
+.main_row img {
+  width: 100%;
+  height: 100%;
 }
 
-.card{
-   border-bottom: 8px solid #f5ba09; 
-}
-.card-text{
-    height: 4rem;
-    text-align: left;
+#about {
+  background: #313552;
+  border-radius: 0.5rem;
 }
 
-#social-media{
-    background: #313552;
+.card {
+  border-bottom: 8px solid #f5ba09;
+}
+.card-text {
+  height: 4rem;
+  text-align: left;
 }
 
-.media_link{
-    padding: 1rem;
-    max-width: 6rem;
-    margin-left: 1rem;
-    border: 2px solid #f5ba09;
-    border-radius: 0.5rem;
+#social-media {
+  background: #313552;
+}
+
+.media_link {
+  padding: 1rem;
+  max-width: 6rem;
+  margin-left: 1rem;
+  border: 2px solid #f5ba09;
+  border-radius: 0.5rem;
+}
+.card_link {
+  padding: 1rem;
+  max-width: 15rem;
+  margin-left: 1rem; 
+  border-radius: 0.5rem;
+}
+mdb-carousel .carousel-multi-item .controls-top .btn-floating {
+  background: #f5ba09;
+}
+
+.modal-footer btn {
+  color: #f5ba09;
+}
+.carousel-indicators li {
+  background-color: #f5ba09 !important;
+  width: 33%;
+  height: 10px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+
+  background-size: 100%, 100%;
+
+  background-image: none;
+}
+
+.carousel-control-next-icon:after {
+  content: ">";
+  font-weight: 900;
+  font-size: 55px;
+  color: #f5ba09;
+}
+
+.carousel-control-prev-icon:after {
+  content: "<";
+  font-weight: 900;
+  font-size: 55px;
+  color: #f5ba09;
 }
