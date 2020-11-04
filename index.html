@@ -28,34 +28,34 @@
 </head>
 
 <script>
-        function includeHTML() {
-            var z, i, elmnt, file, xhttp;
-            /* Loop through a collection of all HTML elements: */
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                /*search for elements with a certain atrribute:*/
-                file = elmnt.getAttribute("carouselComponents");
-                if (file) {
-                    /* Make an HTTP request using the attribute value as the file name: */
-                    xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function () {
-                        if (this.readyState == 4) {
-                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                            /* Remove the attribute, and call this function once more: */
-                            elmnt.removeAttribute("carouselComponents");
-                            includeHTML();
-                        }
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /* Loop through a collection of all HTML elements: */
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("carouselComponents");
+            if (file) {
+                /* Make an HTTP request using the attribute value as the file name: */
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                        /* Remove the attribute, and call this function once more: */
+                        elmnt.removeAttribute("carouselComponents");
+                        includeHTML();
                     }
-                    xhttp.open("GET", file, true);
-                    xhttp.send();
-                    /* Exit the function: */
-                    return;
                 }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /* Exit the function: */
+                return;
             }
         }
-    </script>
+    }
+</script>
 
 <body>
     <div class="container pt-3">
@@ -146,7 +146,7 @@
                         <h5 class="card-title">Webshop App</h5>
                         <p class="card-text">Mobile development practice project.</p>
                         <button type="button" class="btn btn-warning" data-toggle="modal"
-                            data-target="#modalProject">See
+                            data-target="#modalWebshop">See
                             Project</a>
                     </div>
                 </div>
@@ -185,7 +185,7 @@
                         <h5 class="card-title">Hotel Simulatie</h5>
                         <p class="card-text">A school project to program a hotel simulation</p>
                         <button type="button" class="btn btn-warning" data-toggle="modal"
-                            data-target="#modalProject">See
+                            data-target="#modalHotel">See
                             Project</a>
                     </div>
                 </div>
@@ -218,11 +218,18 @@
             </div>
         </div>
     </div>
-    <div carouselComponents = "carouselComponents/carousel.html"></div>
+    <div carouselComponents="carouselComponents/carousel.html"></div>
+    <div carouselComponents="carouselComponents/webshop.html"></div>
     <script>
         includeHTML();
+        jQuery(window).load(function () {
+            /*
+                Stop carousel
+            */
+            $('.carousel').carousel('pause');
+        });
     </script>
-    
+
     <footer>
         <div class="container text-muted text-center py-3 mt-5">
             <h5>Copyright &copy; 2020| <a href="" class="text-white">Stephan van Zwienen</a></h5>
