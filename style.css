@@ -42,6 +42,11 @@ body {
   height: 100%;
 }
 
+.container_discription{
+  border-top: 1px solid#e5e5e5;
+  background-color:white;
+}
+
 #about {
   background: #313552;
   border-radius: 0.5rem;
@@ -130,3 +135,5 @@ mdb-carousel .carousel-multi-item .controls-top .btn-floating {
   font-size: 55px;
   color: #f5ba09;
 }
+
+
