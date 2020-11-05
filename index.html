@@ -24,7 +24,7 @@
         href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Roboto+Slab:wght@200;400;600;900&display=swap"
         rel="stylesheet" />
 
-    <title>Portfolio</title>
+    <title>Stephan van Zwienen</title>
 </head>
 
 <script>
@@ -132,9 +132,9 @@
                         style="height: 13rem">
                     <div class=" card-body">
                         <h5 class="card-title">Biboz mvp app</h5>
-                        <p class="card-text">Digitizing a paper tool to an Android app. <b class="text-warning">(work in progress)</b></p>
-                        <button type="button" class="btn btn-warning" data-toggle="modal"
-                            data-target="#modalBiboz">See
+                        <p class="card-text">Digitizing a paper tool to an Android app. <b class="text-warning">(work in
+                                progress)</b></p>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalBiboz">See
                             Project</a>
                     </div>
                 </div>
@@ -183,9 +183,8 @@
                         style="height: 13rem">
                     <div class=" card-body">
                         <h5 class="card-title">Hotel Simulatie</h5>
-                        <p class="card-text">A school project to program a hotel simulation</p>
-                        <button type="button" class="btn btn-warning" data-toggle="modal"
-                            data-target="#modalHotel">See
+                        <p class="card-text">Programming a hotel simulation</p>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalHotel">See
                             Project</a>
                     </div>
                 </div>
@@ -211,7 +210,7 @@
                 </div>
                 <div class="col-3 mb-2 media_link btn" href="#">
                     <div class="col-6 d-flex align-items-center">
-                        <i class="fas fa-envelope fa-2x text-secondary"></i>
+                        <a  class="fas fa-envelope fa-2x text-secondary"></a>
                     </div>
                 </div>
 
@@ -219,7 +218,7 @@
         </div>
     </div>
     <div carouselComponents="carouselComponents/biboz.html"></div>
-    <div carouselComponents="carouselComponents/carousel.html"></div>
+    <div carouselComponents="carouselComponents/hotel.html"></div>
     <div carouselComponents="carouselComponents/parking.html"></div>
     <div carouselComponents="carouselComponents/webshop.html"></div>
     <div carouselComponents="carouselComponents/escaperoom.html"></div>
@@ -232,6 +231,17 @@
             $('.carousel').carousel('pause');
         });
     </script>
+    <!-- <script>
+        function copyStringToClipboard() {
+            var input = document.body.appendChild(document.createElement("input"));
+            input.value = text;
+            input.focus();
+            input.select();
+            document.execCommand('copy');
+            input.parentNode.removeChild(input);
+        }
+
+    </script> -->
 
     <footer>
         <div class="container text-muted text-center py-3 mt-5">

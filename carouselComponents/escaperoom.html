@@ -1,6 +1,6 @@
 <div class="modal fade" id="modalEscaperoom" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl" role="document">
         <div class="modal-content">
             <!--Header-->
             <div class="modal-header">
@@ -10,35 +10,62 @@
                 </button>
             </div>
             <!--Body-->
-            <div class="modal-body">
-                <div id="carouselEscaperoomIndicators" class="carousel slide">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselEscaperoomIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselEscaperoomIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselEscaperoomIndicators" data-slide-to="2"></li>
-                        
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item text-center active">
-                            <img  src="./images/escaperoom/escaperoomClosed.gif" class="img-responsive"   alt="First slide">
+            <div class="modal-body pl-0 pr-0 pb-0">
+                <div class="col-12">
+
+                    <div id="carouselEscaperoomIndicators" class="carousel slide">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselEscaperoomIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselEscaperoomIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselEscaperoomIndicators" data-slide-to="2"></li>
+
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item text-center active">
+                                <img src="./images/escaperoom/escaperoomClosed.gif" class="img-responsive"
+                                    alt="First slide">
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="./images/escaperoom/escaperoomOpen.gif" class="img-responsive"
+                                    alt="Second slide">
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="./images/explodingView.jpg" class="img-responsive" alt="">
+                            </div>
+
                         </div>
-                        <div class="carousel-item text-center">
-                            <img  src="./images/escaperoom/escaperoomOpen.gif" class="img-responsive" 
-                                alt="Second slide">
-                        </div>
-                        <div class="carousel-item text-center">
-                            <img  src="./images/explodingView.jpg" class="img-responsive" alt="">
-                        </div>
-                        
+                        <a class="carousel-control-prev" href="#carouselEscaperoomIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselEscaperoomIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselEscaperoomIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselEscaperoomIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    <div class="row container_discription ">
+                        <div class="tools_content m-3">
+                            <h4 class="text-warning">Tools</h4>
+                            <h5 class="discription">
+                                Arduino (similar to C), RFID tags, 3d printing 
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="row container_discription ">
+                        <div class="discription_content m-3">
+                            <h4 class="text-warning">Discription</h4>
+                            <h5 class="discription">
+                                This is a school project for a real client. The client is an escape room builder. The
+                                project was to invent and realize a escape room puzzle that fitted within a cyber
+                                security escape room.<br><br>
+                                A puzzle was realized where the goal was to scan a code in the correct order. This was
+                                done with RFID tags.
+                                The puzzle itself also contains the ability to reprogram a new code onto the RFID tags.
+                            </h5>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--Footer-->

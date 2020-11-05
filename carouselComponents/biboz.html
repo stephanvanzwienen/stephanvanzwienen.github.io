@@ -1,57 +1,85 @@
 <div class="modal fade" id="modalBiboz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl" role="document">
         <div class="modal-content">
             <!--Header-->
             <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">Biboz mvp app</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
+                <div class="col-12">
+                    <div class="row">
+                        <h4 class="modal-title" id="myModalLabel">Biboz mvp app</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+
+                </div>
+
             </div>
             <!--Body-->
-            <div class="modal-body">
-                <div id="carouselBibozIndicators" class="carousel slide">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouseBibozIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselBibozIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselBibozIndicators" data-slide-to="2"></li>
-                        <li data-target="#carouselBibozIndicators" data-slide-to="3"></li>
-                        <li data-target="#carouselBibozIndicators" data-slide-to="4"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item text-center active">
-                            <img  src="./images/biboz/biboz.gif" class="img-responsive"   alt="First slide">
+            <div class="modal-body pl-0 pr-0 pb-0">
+                <div class="col-12">
+                    <div id="carouselBibozIndicators" class="carousel slide">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouseBibozIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselBibozIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselBibozIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselBibozIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselBibozIndicators" data-slide-to="4"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item text-center active">
+                                <img src="./images/biboz/biboz.gif" class="img-responsive" alt="First slide">
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="./images/biboz/home.png" class="img-responsive" alt="Second slide">
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="./images/biboz/menu.png" class="img-responsive" alt="">
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="./images/biboz/advice.png" class="img-responsive" alt="">
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="./images/biboz/catalog.png" class="img-responsive" alt="">
+                            </div>
+
+
                         </div>
-                        <div class="carousel-item text-center">
-                            <img  src="./images/biboz/home.png" class="img-responsive" 
-                                alt="Second slide">
-                        </div>
-                        <div class="carousel-item text-center">
-                            <img  src="./images/biboz/menu.png" class="img-responsive" alt="">
-                        </div>
-                        <div class="carousel-item text-center">
-                            <img  src="./images/biboz/advice.png" class="img-responsive" alt="">
-                        </div>
-                        <div class="carousel-item text-center">
-                            <img  src="./images/biboz/catalog.png" class="img-responsive" alt="">
-                        </div>
-                        
-                        
+                        <a class="carousel-control-prev" href="#carouselBibozIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselBibozIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselBibozIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselBibozIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    <div class="row container_discription ">
+                        <div class="tools_content m-3">
+                            <h4 class="text-warning">Tools</h4>
+                            <h5 class="discription">
+                                Flutter, Dart, Firebase, Sqlite
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="row container_discription ">
+                        <div class="discription_content m-3">
+                            <h4 class="text-warning">Discription</h4>
+                            <h5 class="discription">
+                                Biboz is a project that is developing a tool for health care professionals. This tools
+                                purpose is to quickly setup a advice for their clients. This tool however is only
+                                available on paper.
+                                This project is to digitize this tool into a mobile app, with added benefits.
+                            </h5>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--Footer-->
             <div class="modal-footer">
-                <div class="row">
+                <div class="row ">
                     <a class="btn btn-warning" href="https://github.com/stephanvanzwienen/stephanvanzwienen.github.io"
                         target="_blank">
                         <div class="row">
