@@ -208,9 +208,10 @@
                         <a class="fab fa-github fa-2x text-secondary" href="https://github.com/stephanvanzwienen"></a>
                     </div>
                 </div>
-                <div class="col-3 mb-2 media_link btn" href="#">
+                <div id="Copy" data-toggle="tooltip" title="Copy mail adress" class="col-3 mb-2 media_link btn"
+                    onmouseout="outFunc()" href="#">
                     <div class="col-6 d-flex align-items-center">
-                        <a  class="fas fa-envelope fa-2x text-secondary"></a>
+                        <a class="fas fa-envelope fa-2x text-secondary"></a>
                     </div>
                 </div>
 
@@ -223,6 +224,11 @@
     <div carouselComponents="carouselComponents/webshop.html"></div>
     <div carouselComponents="carouselComponents/escaperoom.html"></div>
     <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script>
         includeHTML();
         jQuery(window).load(function () {
             /*
@@ -231,17 +237,23 @@
             $('.carousel').carousel('pause');
         });
     </script>
-    <!-- <script>
-        function copyStringToClipboard() {
-            var input = document.body.appendChild(document.createElement("input"));
-            input.value = text;
-            input.focus();
-            input.select();
-            document.execCommand('copy');
-            input.parentNode.removeChild(input);
+    <script>
+        function copyMailToClipboard(value) {
+            var tempInput = document.createElement("input");
+            tempInput.value = value;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            $('[data-toggle="tooltip"]').attr('data-original-title', "Copied mail adress: " + value).tooltip('show');
         }
-
-    </script> -->
+        document.querySelector('#Copy').onclick = function () {
+            copyMailToClipboard('stephanvanzwienen@gmail.com');
+        }
+        document.querySelector('#Copy').onmouseout = function () {
+            $('[data-toggle="tooltip"]').tooltip('hide').attr('data-original-title', "Copy mail adress").tooltip('show');
+        }
+    </script>
 
     <footer>
         <div class="container text-muted text-center py-3 mt-5">
