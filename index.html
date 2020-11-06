@@ -76,7 +76,7 @@
                         <a href="#social-media" class="text-white navigation-link">Social Media</a>
                     </div>
                     <div class="col-sm-3">
-                        <a href="#resume" class="text-white navigation-link">Resume</a>
+                        <a id=downloadlink href="#resume" class="text-white navigation-link">Resume</a>
                     </div>
                 </div>
             </div>
@@ -223,6 +223,18 @@
     <div carouselComponents="carouselComponents/parking.html"></div>
     <div carouselComponents="carouselComponents/webshop.html"></div>
     <div carouselComponents="carouselComponents/escaperoom.html"></div>
+
+    <script>
+        document.querySelector('#downloadlink').onclick = function () {
+            if (scripts[scriptUrl]) return;  //exit if loaded
+            scripts[scriptUrl] = 1;  //mark that it is loaded
+            var link = document.getElementById('downloadlink');
+            link.href = "./documents/CV Stephan van Zwienen.pdf";
+            link.download = 'file.pdf';
+            link.dispatchEvent(new MouseEvent('click'));
+        }
+
+    </script>
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
