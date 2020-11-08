@@ -226,12 +226,7 @@
 
     <script>
         document.querySelector('#downloadlink').onclick = function () {
-            if (scripts[scriptUrl]) return;  //exit if loaded
-            scripts[scriptUrl] = 1;  //mark that it is loaded
-            var link = document.getElementById('downloadlink');
-            link.href = "./documents/CV Stephan van Zwienen.pdf";
-            link.download = 'file.pdf';
-            link.dispatchEvent(new MouseEvent('click'));
+            window.open("./documents/CV Stephan van Zwienen.pdf",'_blank');
         }
 
     </script>
