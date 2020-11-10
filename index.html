@@ -27,35 +27,7 @@
     <title>Stephan van Zwienen</title>
 </head>
 
-<script>
-    function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /* Loop through a collection of all HTML elements: */
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("carouselComponents");
-            if (file) {
-                /* Make an HTTP request using the attribute value as the file name: */
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function () {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                        /* Remove the attribute, and call this function once more: */
-                        elmnt.removeAttribute("carouselComponents");
-                        includeHTML();
-                    }
-                }
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                /* Exit the function: */
-                return;
-            }
-        }
-    }
-</script>
+<script src="./javascript/include-carousels.js"></script>
 
 <body>
     <div class="container pt-3">
@@ -76,7 +48,7 @@
                         <a href="#social-media" class="text-white navigation-link">Social Media</a>
                     </div>
                     <div class="col-sm-3">
-                        <a href="#resume" class="text-white navigation-link">Resume</a>
+                        <a id=downloadlink href="#resume" class="text-white navigation-link">Resume</a>
                     </div>
                 </div>
             </div>
@@ -170,7 +142,7 @@
                         style="height: 13rem">
                     <div class=" card-body">
                         <h5 class="card-title">Escape Room puzzel</h5>
-                        <p class="card-text">Invent and Realize a Escape Room puzzle</p>
+                        <p class="card-text">Invent and realize a Escape Room puzzle.</p>
                         <button type="button" class="btn btn-warning" data-toggle="modal"
                             data-target="#modalEscaperoom">See
                             Project</a>
@@ -183,7 +155,7 @@
                         style="height: 13rem">
                     <div class=" card-body">
                         <h5 class="card-title">Hotel Simulatie</h5>
-                        <p class="card-text">Programming a hotel simulation</p>
+                        <p class="card-text">Programming a hotel simulation.</p>
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalHotel">See
                             Project</a>
                     </div>
@@ -200,17 +172,18 @@
                 <div class="col-3  mb-2 media_link btn" href="#">
                     <div class="col-6 d-flex align-items-center">
                         <a class="fab fa-linkedin-in fa-2x text-secondary"
-                            href="https://www.linkedin.com/in/stephanvanzwienen/"></a>
+                            href="https://www.linkedin.com/in/stephanvanzwienen/" target="_blank"></a>
                     </div>
                 </div>
                 <div class="col-3 mb-2 media_link btn" href="#">
                     <div class="col-6 d-flex align-items-center">
-                        <a class="fab fa-github fa-2x text-secondary" href="https://github.com/stephanvanzwienen"></a>
+                        <a class="fab fa-github fa-2x text-secondary" href="https://github.com/stephanvanzwienen" target="_blank"></a>
                     </div>
                 </div>
-                <div class="col-3 mb-2 media_link btn" href="#">
+                <div id="Copy" data-toggle="tooltip" title="Copy mail adress" class="col-3 mb-2 media_link btn"
+                    onmouseout="outFunc()" href="#">
                     <div class="col-6 d-flex align-items-center">
-                        <a  class="fas fa-envelope fa-2x text-secondary"></a>
+                        <a class="fas fa-envelope fa-2x text-secondary"></a>
                     </div>
                 </div>
 
@@ -222,26 +195,9 @@
     <div carouselComponents="carouselComponents/parking.html"></div>
     <div carouselComponents="carouselComponents/webshop.html"></div>
     <div carouselComponents="carouselComponents/escaperoom.html"></div>
-    <script>
-        includeHTML();
-        jQuery(window).load(function () {
-            /*
-                Stop carousel
-            */
-            $('.carousel').carousel('pause');
-        });
-    </script>
-    <!-- <script>
-        function copyStringToClipboard() {
-            var input = document.body.appendChild(document.createElement("input"));
-            input.value = text;
-            input.focus();
-            input.select();
-            document.execCommand('copy');
-            input.parentNode.removeChild(input);
-        }
 
-    </script> -->
+    <script src="./javascript/copy-mail-adress.js"></script>
+    <script src="./javascript/download-resume.js"></script>    
 
     <footer>
         <div class="container text-muted text-center py-3 mt-5">
